@@ -1,0 +1,24 @@
+# GitHub Pages configuration for Anchor website
+title: "Anchor - Location-Based Check-ins for Bluesky"
+description: "A native macOS menubar app for location-based check-ins to Bluesky using the AT Protocol."
+
+# GitHub Pages settings
+remote_theme: null
+plugins: []
+
+# Custom settings
+url: "https://dropanchor.app"
+github_username: tijs
+repository: Anchor
+
+# Include dot files for .well-known directory
+include:
+  - .well-known
+
+# Exclude development files
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor 

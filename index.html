@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anchor - Location-Based Check-ins for Bluesky</title>
+    <meta name="description" content="Anchor is a macOS menubar app for location-based check-ins to Bluesky using the AT Protocol.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .hero .anchor-symbol {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .features {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .features h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            color: #333;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 1rem;
+        }
+        
+        .feature .emoji {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .feature h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: #667eea;
+        }
+        
+        .feature p {
+            color: #666;
+        }
+        
+        .download {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 0.5rem;
+        }
+        
+        .btn:hover {
+            background: #5a67d8;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: #667eea;
+        }
+        
+        .tech-stack {
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            backdrop-filter: blur(10px);
+            color: white;
+        }
+        
+        .tech-stack h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .tech-item {
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero .anchor-symbol {
+                font-size: 3rem;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <span class="anchor-symbol">⚓</span>
+            <h1>Anchor</h1>
+            <p>Location-based check-ins for Bluesky</p>
+            <div class="download">
+                <a href="https://github.com/tijs/Anchor" class="btn btn-secondary">View on GitHub</a>
+                <a href="#features" class="btn">Learn More</a>
+            </div>
+        </div>
+
+        <div class="features" id="features">
+            <h2>Drop Anchor Anywhere</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 2rem;">
+                Anchor is a native macOS menubar app that lets you share your location-based check-ins on Bluesky using the AT Protocol.
+            </p>
+            
+            <div class="feature-grid">
+                <div class="feature">
+                    <span class="emoji">🗺️</span>
+                    <h3>Smart Location Discovery</h3>
+                    <p>Find nearby climbing gyms, restaurants, and points of interest using OpenStreetMap data.</p>
+                </div>
+                
+                <div class="feature">
+                    <span class="emoji">💬</span>
+                    <h3>Rich Text Posts</h3>
+                    <p>Share check-ins with clickable venue links, hashtags, and custom messages on Bluesky.</p>
+                </div>
+                
+                <div class="feature">
+                    <span class="emoji">🍎</span>
+                    <h3>Native macOS</h3>
+                    <p>Beautiful SwiftUI interface living in your menubar, designed for macOS 14+.</p>
+                </div>
+                
+                <div class="feature">
+                    <span class="emoji">🔐</span>
+                    <h3>Privacy First</h3>
+                    <p>Your location data stays on your device. Only share what you choose to share.</p>
+                </div>
+                
+                <div class="feature">
+                    <span class="emoji">🌐</span>
+                    <h3>AT Protocol</h3>
+                    <p>Built on Bluesky's open AT Protocol for decentralized social networking.</p>
+                </div>
+                
+                <div class="feature">
+                    <span class="emoji">🎯</span>
+                    <h3>One-Click Check-ins</h3>
+                    <p>Quick and easy location sharing directly from your menubar.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tech-stack">
+            <h2>Built With Modern Tech</h2>
+            <div class="tech-list">
+                <span class="tech-item">Swift 6</span>
+                <span class="tech-item">SwiftUI</span>
+                <span class="tech-item">AT Protocol</span>
+                <span class="tech-item">CoreLocation</span>
+                <span class="tech-item">OpenStreetMap</span>
+                <span class="tech-item">Overpass API</span>
+                <span class="tech-item">macOS 14+</span>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>
+                Open source project by <a href="https://github.com/tijs">@tijs</a><br>
+                <a href="https://github.com/tijs/Anchor">GitHub</a> • 
+                <a href="https://github.com/tijs/Anchor/blob/main/LICENSE">License</a> • 
+                <a href="/.well-known/atproto-lexicons/app.dropanchor.checkin.json">AT Proto Lexicon</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html> 
