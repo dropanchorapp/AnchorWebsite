@@ -7,6 +7,8 @@
     <meta name="description" content="Anchor is a macOS menubar app for location-based check-ins to Bluesky using the AT Protocol.">
     
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        
         * {
             margin: 0;
             padding: 0;
@@ -14,196 +16,353 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.7;
+            color: #1a1a2e;
+            background: #fafbfc;
             min-height: 100vh;
         }
         
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 0 2rem;
         }
         
         .hero {
             text-align: center;
-            padding: 4rem 0;
+            padding: 6rem 0 8rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="25" cy="25" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="25" r="1.5" fill="rgba(255,255,255,0.08)"/><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.12)"/><circle cx="25" cy="75" r="1.5" fill="rgba(255,255,255,0.06)"/><circle cx="75" cy="75" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
         }
         
         .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            font-size: clamp(3rem, 8vw, 5rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.2);
         }
         
         .hero .logo {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 1rem;
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 2rem;
             display: block;
+            border-radius: 32px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
         }
         
         .hero p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+            font-weight: 500;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .section {
+            padding: 6rem 0;
+        }
+        
+        .section-white {
+            background: white;
+        }
+        
+        .section-gray {
+            background: #f8fafc;
         }
         
         .features {
             background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 2rem 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 24px;
+            padding: 4rem;
+            margin: -4rem 2rem 0;
+            box-shadow: 0 20px 80px rgba(0,0,0,0.08);
+            position: relative;
+            z-index: 3;
         }
         
         .features h2 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
             text-align: center;
-            color: #333;
+            color: #1a1a2e;
+            letter-spacing: -0.02em;
+        }
+        
+        .features .subtitle {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 4rem;
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .feature-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
         }
         
         .feature {
-            text-align: center;
-            padding: 1rem;
+            text-align: left;
+            padding: 2rem;
+            border-radius: 16px;
+            background: #fafbfc;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+            border-color: #667eea;
         }
         
         .feature .emoji {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
             display: block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
         .feature h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-            color: #667eea;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1a1a2e;
+            letter-spacing: -0.01em;
         }
         
         .feature p {
-            color: #666;
+            color: #64748b;
+            font-size: 1.1rem;
+            line-height: 1.7;
         }
         
         .download {
             text-align: center;
-            margin: 2rem 0;
+            margin: 3rem 0;
         }
         
         .btn {
             display: inline-block;
-            background: #667eea;
+            background: linear-gradient(135deg, #667eea, #764ba2);
             color: white;
-            padding: 1rem 2rem;
+            padding: 1.2rem 2.5rem;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 12px;
             font-weight: 600;
+            font-size: 1.1rem;
             transition: all 0.3s ease;
-            margin: 0.5rem;
+            margin: 0.75rem;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
         }
         
         .btn:hover {
-            background: #5a67d8;
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
         }
         
         .btn-secondary {
-            background: transparent;
-            border: 2px solid white;
+            background: rgba(255,255,255,0.2);
+            border: 2px solid rgba(255,255,255,0.3);
             color: white;
+            backdrop-filter: blur(10px);
         }
         
         .btn-secondary:hover {
+            background: rgba(255,255,255,0.25);
+            border-color: rgba(255,255,255,0.5);
+        }
+        
+        .writings-section {
+            background: #f8fafc;
+            padding: 6rem 0;
+        }
+        
+        .writings-section h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: #1a1a2e;
+            letter-spacing: -0.02em;
+        }
+        
+        .writings-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .writing-item {
+            margin-bottom: 2rem;
+            padding: 2rem;
             background: white;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+            list-style: none;
+        }
+        
+        .writing-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+            border-color: #667eea;
+        }
+        
+        .writing-item a {
+            color: #1a1a2e;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.3rem;
+            letter-spacing: -0.01em;
+            display: block;
+            margin-bottom: 0.75rem;
+        }
+        
+        .writing-item a:hover {
             color: #667eea;
         }
         
+        .writing-item p {
+            color: #64748b;
+            font-size: 1.1rem;
+            margin: 0;
+            line-height: 1.6;
+        }
+        
         .tech-stack {
-            background: rgba(255,255,255,0.1);
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 2rem 0;
-            backdrop-filter: blur(10px);
-            color: white;
+            background: white;
+            padding: 6rem 0;
         }
         
         .tech-stack h2 {
             text-align: center;
-            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 3rem;
+            color: #1a1a2e;
+            letter-spacing: -0.02em;
         }
         
         .tech-list {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 1rem;
+            gap: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
         }
         
         .tech-item {
-            background: rgba(255,255,255,0.2);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            backdrop-filter: blur(5px);
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .tech-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
         }
         
         .footer {
             text-align: center;
-            padding: 2rem 0;
-            color: rgba(255,255,255,0.8);
+            padding: 4rem 0;
+            background: #1a1a2e;
+            color: #94a3b8;
         }
         
         .footer a {
-            color: white;
+            color: #e2e8f0;
             text-decoration: none;
+            font-weight: 500;
         }
         
         .footer a:hover {
-            text-decoration: underline;
+            color: #667eea;
         }
         
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
+            .hero {
+                padding: 4rem 0 6rem;
             }
             
-            .hero .anchor-symbol {
-                font-size: 3rem;
+            .features {
+                margin: -3rem 1rem 0;
+                padding: 3rem 2rem;
+                border-radius: 20px;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
             }
             
             .container {
-                padding: 1rem;
+                padding: 0 1rem;
+            }
+            
+            .section {
+                padding: 4rem 0;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="hero">
-            <img src="static/AnchorAppIcon-transparent.png" alt="Anchor App Icon" class="logo">
-            <h1>Anchor</h1>
-            <p>Location-based check-ins for Bluesky</p>
-            <div class="download">
-                <a href="https://github.com/dropanchorapp/Anchor" class="btn btn-secondary">View on GitHub</a>
-                <a href="#features" class="btn">Set Sail</a>
+    <div class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <img src="static/AnchorAppIcon-transparent.png" alt="Anchor App Icon" class="logo">
+                <h1>Anchor</h1>
+                <p>Location-based check-ins for Bluesky</p>
+                <div class="download">
+                    <a href="https://github.com/dropanchorapp/Anchor" class="btn btn-secondary">View on GitHub</a>
+                    <a href="#features" class="btn">Set Sail</a>
+                </div>
             </div>
         </div>
+    </div>
 
+    <div class="container">
         <div class="features" id="features">
             <h2>Drop Anchor Anywhere</h2>
-            <p style="text-align: center; color: #666; margin-bottom: 2rem;">
+            <p class="subtitle">
                 Anchor is a native macOS menubar app that lets you share your location-based check-ins on Bluesky using the AT Protocol.
             </p>
             
@@ -245,8 +404,32 @@
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="tech-stack">
+    <div class="writings-section">
+        <div class="container">
+            <h2>Writings</h2>
+            
+            <div class="writings-list">
+                <ul style="list-style: none; padding: 0; max-width: 600px; margin: 0 auto;">
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid #e2e8f0;">
+                        <a href="https://medium.com/@_tijs/two-ways-to-build-location-on-atproto-geo-markers-vs-embedded-check-ins-7b8dfea0f5f5" target="_blank" style="color: #1a1a2e; text-decoration: none; font-weight: 500; font-size: 1.1rem;">Two Ways to Build Location on ATProto: Geo-markers vs Embedded Check-ins</a>
+                    </li>
+                    
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid #e2e8f0;">
+                        <a href="https://medium.com/@_tijs/the-missing-piece-how-location-data-is-coming-to-the-at-protocol-9858160c2634" target="_blank" style="color: #1a1a2e; text-decoration: none; font-weight: 500; font-size: 1.1rem;">The Missing Piece: How Location Data is Coming to the AT Protocol</a>
+                    </li>
+                    
+                    <li style="padding: 0.75rem 0;">
+                        <a href="https://medium.com/@_tijs/building-a-foursquare-clone-on-at-protocol-3c648aee8d79" target="_blank" style="color: #1a1a2e; text-decoration: none; font-weight: 500; font-size: 1.1rem;">Building a Foursquare Clone on AT Protocol</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="tech-stack">
+        <div class="container">
             <h2>Built With Modern Tech</h2>
             <div class="tech-list">
                 <span class="tech-item">Swift 6</span>
@@ -258,8 +441,10 @@
                 <span class="tech-item">macOS 14+</span>
             </div>
         </div>
+    </div>
 
-        <div class="footer">
+    <div class="footer">
+        <div class="container">
             <p>
                 Open source project by <a href="https://github.com/tijs">@tijs</a><br>
                 <a href="https://github.com/dropanchorapp/Anchor">GitHub</a> • 
