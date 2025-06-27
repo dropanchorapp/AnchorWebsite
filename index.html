@@ -443,6 +443,126 @@
         </div>
     </div>
 
+    <div class="section section-white">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; font-weight: 800; margin-bottom: 3rem; color: #1a1a2e; letter-spacing: -0.02em;">How It Works: Check-in Records & PDS</h2>
+            
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div style="margin-bottom: 4rem;">
+                    <h3 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 1.5rem; color: #1a1a2e;">What's a Check-in Record?</h3>
+                    <p style="font-size: 1.1rem; color: #64748b; margin-bottom: 2rem; line-height: 1.7;">
+                        Every check-in you create in Anchor gets stored as a structured record using the AT Protocol. Here's what one looks like under the hood:
+                    </p>
+                    
+                    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 2rem; margin-bottom: 2rem;">
+                        <pre style="margin: 0; overflow-x: auto; font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace; font-size: 0.9rem; line-height: 1.6; color: #1a1a2e;"><code>{
+  "$type": "app.dropanchor.checkin",
+  "text": "Great coffee and climbing session!",
+  "createdAt": "2025-06-27T10:30:00Z",
+  "locations": [
+    {
+      "$type": "community.lexicon.location.geo",
+      "latitude": "40.7128",
+      "longitude": "-74.0060"
+    },
+    {
+      "$type": "community.lexicon.location.address", 
+      "name": "Brooklyn Boulders",
+      "street": "123 Main St",
+      "locality": "New York",
+      "region": "NY",
+      "country": "US",
+      "postalCode": "10001"
+    }
+  ],
+  "category": "climbing",
+  "categoryGroup": "Sports & Fitness",
+  "categoryIcon": "🧗‍♂️"
+}</code></pre>
+                    </div>
+                    
+                    <p style="font-size: 1.1rem; color: #64748b; line-height: 1.7;">
+                        This record uses the <a href="/.well-known/atproto-lexicons/app.dropanchor.checkin.json" style="color: #667eea; text-decoration: none; font-weight: 500;">app.dropanchor.checkin lexicon</a> and includes both geographic coordinates and structured address data using community-standard location schemas.
+                    </p>
+                </div>
+                
+                <div style="margin-bottom: 4rem;">
+                    <h3 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 1.5rem; color: #1a1a2e;">What Does the PDS Do?</h3>
+                    <p style="font-size: 1.1rem; color: #64748b; margin-bottom: 1.5rem; line-height: 1.7;">
+                        A Personal Data Server (PDS) in the AT Protocol ecosystem is like your personal data vault. Think of it as your own private corner of the decentralized social network where your check-ins live.
+                    </p>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 2rem 0;">
+                        <div style="padding: 1.5rem; background: #fafbfc; border: 1px solid #e2e8f0; border-radius: 12px;">
+                            <h4 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem; color: #1a1a2e;">🏠 Your Data, Your Server</h4>
+                            <p style="font-size: 1rem; color: #64748b; line-height: 1.6; margin: 0;">
+                                Unlike centralized platforms, your check-ins are stored on infrastructure you control (or trust). Our <a href="https://anchorpds.val.run/" style="color: #667eea; text-decoration: none;">PDS</a> handles storage and federation.
+                            </p>
+                        </div>
+                        
+                        <div style="padding: 1.5rem; background: #fafbfc; border: 1px solid #e2e8f0; border-radius: 12px;">
+                            <h4 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem; color: #1a1a2e;">🌐 Federation Ready</h4>
+                            <p style="font-size: 1rem; color: #64748b; line-height: 1.6; margin: 0;">
+                                Your check-ins can be discovered and shared across the entire AT Protocol network, not just within Anchor. Any compatible client can read your location data.
+                            </p>
+                        </div>
+                        
+                        <div style="padding: 1.5rem; background: #fafbfc; border: 1px solid #e2e8f0; border-radius: 12px;">
+                            <h4 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem; color: #1a1a2e;">🔍 Rich Categorization</h4>
+                            <p style="font-size: 1rem; color: #64748b; line-height: 1.6; margin: 0;">
+                                Each check-in includes structured category data based on OpenStreetMap standards, making it easy to filter and discover places by type.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 1.5rem; color: #1a1a2e;">Place Categories & OpenStreetMap</h3>
+                    <p style="font-size: 1.1rem; color: #64748b; margin-bottom: 2rem; line-height: 1.7;">
+                        Anchor uses a rich categorization system based on <a href="https://wiki.openstreetmap.org/" style="color: #667eea; text-decoration: none; font-weight: 500;">OpenStreetMap</a> standards. We've organized 220+ OSM categories into 11 intuitive groups:
+                    </p>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+                        <div style="padding: 1rem; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border-radius: 12px; text-align: center;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🍽️</div>
+                            <div style="font-weight: 600;">Food & Drink</div>
+                        </div>
+                        <div style="padding: 1rem; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border-radius: 12px; text-align: center;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏃‍♂️</div>
+                            <div style="font-weight: 600;">Sports & Fitness</div>
+                        </div>
+                        <div style="padding: 1rem; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border-radius: 12px; text-align: center;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🛍️</div>
+                            <div style="font-weight: 600;">Shopping</div>
+                        </div>
+                        <div style="padding: 1rem; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border-radius: 12px; text-align: center;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎭</div>
+                            <div style="font-weight: 600;">Entertainment</div>
+                        </div>
+                        <div style="padding: 1rem; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border-radius: 12px; text-align: center;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🌳</div>
+                            <div style="font-weight: 600;">Nature & Parks</div>
+                        </div>
+                        <div style="padding: 1rem; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border-radius: 12px; text-align: center;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎨</div>
+                            <div style="font-weight: 600;">Culture</div>
+                        </div>
+                    </div>
+                    
+                    <p style="font-size: 1rem; color: #64748b; text-align: center; margin-bottom: 1.5rem;">
+                        <em>Plus Transportation, Services, Health, Education, and Accommodation</em>
+                    </p>
+                    
+                    <div style="text-align: center;">
+                        <a href="https://wiki.openstreetmap.org/wiki/Map_features" style="display: inline-block; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 1rem 1.5rem; text-decoration: none; border-radius: 8px; font-weight: 600; margin: 0.5rem;">View OSM Categories</a>
+                        <a href="https://wiki.openstreetmap.org/wiki/Key:amenity" style="display: inline-block; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 1rem 1.5rem; text-decoration: none; border-radius: 8px; font-weight: 600; margin: 0.5rem;">OSM Amenities</a>
+                        <a href="https://wiki.openstreetmap.org/wiki/Key:leisure" style="display: inline-block; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 1rem 1.5rem; text-decoration: none; border-radius: 8px; font-weight: 600; margin: 0.5rem;">OSM Leisure</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="footer">
         <div class="container">
             <p>

@@ -5,6 +5,7 @@
     "main": {
       "type": "record",
       "key": "self",
+      "description": "A location-based check-in record for the Anchor app",
       "record": {
         "type": "object",
         "required": [
@@ -14,14 +15,17 @@
         "properties": {
           "text": {
             "type": "string",
-            "maxLength": 300
+            "maxLength": 300,
+            "description": "Check-in message or venue name"
           },
           "createdAt": {
             "type": "string",
-            "format": "datetime"
+            "format": "datetime",
+            "description": "ISO 8601 timestamp when the check-in was created"
           },
           "locations": {
             "type": "array",
+            "description": "Array of location objects using community lexicon standards",
             "items": {
               "type": "union",
               "refs": [
@@ -29,6 +33,21 @@
                 "community.lexicon.location.address"
               ]
             }
+          },
+          "category": {
+            "type": "string",
+            "maxLength": 100,
+            "description": "OpenStreetMap category value (e.g., 'restaurant', 'climbing', 'hotel')"
+          },
+          "categoryGroup": {
+            "type": "string",
+            "maxLength": 100,
+            "description": "Human-readable category group (e.g., 'Food & Drink', 'Sports & Fitness')"
+          },
+          "categoryIcon": {
+            "type": "string",
+            "maxLength": 10,
+            "description": "Unicode emoji representing the category (e.g., '🍽️', '🧗‍♂️', '🏨')"
           }
         }
       }

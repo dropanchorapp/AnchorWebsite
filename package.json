@@ -1,0 +1,25 @@
+{
+    "name": "anchor-lexicon-validator",
+    "version": "1.0.0",
+    "description": "AT Protocol lexicon validator for Anchor project using official @atproto/lexicon",
+    "main": "validate-lexicon-official.js",
+    "scripts": {
+        "validate": "node validate-lexicon-official.js",
+        "validate:checkin": "node validate-lexicon-official.js ./.well-known/atproto-lexicons/app.dropanchor.checkin.json",
+        "test": "npm run validate:checkin"
+    },
+    "keywords": [
+        "atproto",
+        "lexicon",
+        "validation",
+        "anchor"
+    ],
+    "author": "Anchor Team",
+    "license": "MIT",
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "dependencies": {
+        "@atproto/lexicon": "^0.4.11"
+    }
+}
