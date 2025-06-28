@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anchor - Location-Based Check-ins for Bluesky</title>
-    <meta name="description" content="Anchor is a macOS menubar app for location-based check-ins to Bluesky using the AT Protocol.">
+    <title>Anchor - Social Check-ins for Bluesky</title>
+    <meta name="description" content="Anchor brings social check-ins to Bluesky with native apps for macOS and iOS using the AT Protocol.">
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
@@ -262,44 +262,7 @@
             line-height: 1.6;
         }
         
-        .tech-stack {
-            background: white;
-            padding: 6rem 0;
-        }
-        
-        .tech-stack h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 3rem;
-            color: #1a1a2e;
-            letter-spacing: -0.02em;
-        }
-        
-        .tech-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1.5rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .tech-item {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 1rem 1.5rem;
-            border-radius: 12px;
-            font-size: 1rem;
-            font-weight: 600;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
-            transition: all 0.3s ease;
-        }
-        
-        .tech-item:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
-        }
+
         
         .footer {
             text-align: center;
@@ -350,11 +313,14 @@
             <div class="hero-content">
                 <img src="static/AnchorAppIcon-transparent.png" alt="Anchor App Icon" class="logo">
                 <h1>Anchor</h1>
-                <p>Location-based check-ins for Bluesky</p>
+                <p>Social check-ins for Bluesky</p>
                 <div class="download">
                     <a href="https://github.com/dropanchorapp/Anchor" class="btn btn-secondary">View on GitHub</a>
                     <a href="#features" class="btn">Set Sail</a>
                 </div>
+                <p style="margin-top: 2rem; font-size: 1.1rem; opacity: 0.9;">
+                    Available for macOS 14+ and iOS
+                </p>
             </div>
         </div>
     </div>
@@ -363,7 +329,7 @@
         <div class="features" id="features">
             <h2>Drop Anchor Anywhere</h2>
             <p class="subtitle">
-                Anchor is a native macOS menubar app that lets you share your location-based check-ins on Bluesky using the AT Protocol.
+                Anchor brings social check-ins to Bluesky with native apps for macOS and iOS, letting you share your location and experiences using the AT Protocol.
             </p>
             
             <div class="feature-grid">
@@ -381,14 +347,14 @@
                 
                 <div class="feature">
                     <span class="emoji">🍎</span>
-                    <h3>Native macOS</h3>
-                    <p>Beautiful SwiftUI interface living in your menubar, designed for macOS 14+.</p>
+                    <h3>Native Apps</h3>
+                    <p>Beautiful SwiftUI interfaces on macOS (menubar) and iOS (mobile), designed for their respective platforms.</p>
                 </div>
                 
                 <div class="feature">
                     <span class="emoji">🔐</span>
-                    <h3>Privacy First</h3>
-                    <p>Your location data stays on your device. Only share what you choose to share.</p>
+                    <h3>Open Source</h3>
+                    <p>Both the apps and the backend are open source. You can see how it works and contribute to it.</p>
                 </div>
                 
                 <div class="feature">
@@ -399,46 +365,46 @@
                 
                 <div class="feature">
                     <span class="emoji">🎯</span>
-                    <h3>One-Click Check-ins</h3>
-                    <p>Quick and easy location sharing directly from your menubar.</p>
+                    <h3>Quick Check-ins</h3>
+                    <p>Fast and easy location sharing from your macOS menubar or iOS device.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="writings-section">
+    <div class="section section-gray">
         <div class="container">
-            <h2>Writings</h2>
+            <h2 style="text-align: center; font-size: 2.5rem; font-weight: 800; margin-bottom: 3rem; color: #1a1a2e; letter-spacing: -0.02em;">Choose Your Platform</h2>
             
-            <div class="writings-list">
-                <ul style="list-style: none; padding: 0; max-width: 600px; margin: 0 auto;">
-                    <li style="padding: 0.75rem 0; border-bottom: 1px solid #e2e8f0;">
-                        <a href="https://medium.com/@_tijs/two-ways-to-build-location-on-atproto-geo-markers-vs-embedded-check-ins-7b8dfea0f5f5" target="_blank" style="color: #1a1a2e; text-decoration: none; font-weight: 500; font-size: 1.1rem;">Two Ways to Build Location on ATProto: Geo-markers vs Embedded Check-ins</a>
-                    </li>
-                    
-                    <li style="padding: 0.75rem 0; border-bottom: 1px solid #e2e8f0;">
-                        <a href="https://medium.com/@_tijs/the-missing-piece-how-location-data-is-coming-to-the-at-protocol-9858160c2634" target="_blank" style="color: #1a1a2e; text-decoration: none; font-weight: 500; font-size: 1.1rem;">The Missing Piece: How Location Data is Coming to the AT Protocol</a>
-                    </li>
-                    
-                    <li style="padding: 0.75rem 0;">
-                        <a href="https://medium.com/@_tijs/building-a-foursquare-clone-on-at-protocol-3c648aee8d79" target="_blank" style="color: #1a1a2e; text-decoration: none; font-weight: 500; font-size: 1.1rem;">Building a Foursquare Clone on AT Protocol</a>
-                    </li>
-                </ul>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; max-width: 900px; margin: 0 auto;">
+                <div style="background: white; padding: 3rem 2rem; border-radius: 20px; text-align: center; box-shadow: 0 12px 40px rgba(0,0,0,0.08); border: 1px solid #e2e8f0;">
+                    <div style="font-size: 4rem; margin-bottom: 1.5rem;">💻</div>
+                    <h3 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 1rem; color: #1a1a2e;">macOS Menubar</h3>
+                    <p style="color: #64748b; font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;">
+                        Quick check-ins from your Mac's menubar. Perfect for when you're working and want to share where you are or what you're doing.
+                    </p>
+                    <div style="color: #667eea; font-weight: 600; margin-bottom: 1rem;">Requirements:</div>
+                    <div style="color: #64748b; font-size: 0.95rem;">macOS 14 or later</div>
+                </div>
+                
+                <div style="background: white; padding: 3rem 2rem; border-radius: 20px; text-align: center; box-shadow: 0 12px 40px rgba(0,0,0,0.08); border: 1px solid #e2e8f0;">
+                    <div style="font-size: 4rem; margin-bottom: 1.5rem;">📱</div>
+                    <h3 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 1rem; color: #1a1a2e;">iOS Mobile</h3>
+                    <p style="color: #64748b; font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;">
+                        Full-featured mobile app for check-ins on the go. Browse your feed, discover nearby places, and share your adventures.
+                    </p>
+                    <div style="color: #667eea; font-weight: 600; margin-bottom: 1rem;">Requirements:</div>
+                    <div style="color: #64748b; font-size: 0.95rem;">iOS 26 or later</div>
+                </div>
             </div>
-        </div>
-    </div>
-
-    <div class="tech-stack">
-        <div class="container">
-            <h2>Built With Modern Tech</h2>
-            <div class="tech-list">
-                <span class="tech-item">Swift 6</span>
-                <span class="tech-item">SwiftUI</span>
-                <span class="tech-item">AT Protocol</span>
-                <span class="tech-item">CoreLocation</span>
-                <span class="tech-item">OpenStreetMap</span>
-                <span class="tech-item">Overpass API</span>
-                <span class="tech-item">macOS 14+</span>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="color: #64748b; font-size: 1.1rem; margin-bottom: 2rem;">
+                    Both apps share the same AT Protocol backend, so your check-ins sync seamlessly between platforms.
+                </p>
+                <a href="https://github.com/dropanchorapp/Anchor" style="display: inline-block; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 1.2rem 2.5rem; text-decoration: none; border-radius: 12px; font-weight: 600; font-size: 1.1rem;">
+                    Download from GitHub
+                </a>
             </div>
         </div>
     </div>
@@ -522,36 +488,21 @@
                         Anchor uses a rich categorization system based on <a href="https://wiki.openstreetmap.org/" style="color: #667eea; text-decoration: none; font-weight: 500;">OpenStreetMap</a> standards. We've organized 220+ OSM categories into 11 intuitive groups:
                     </p>
                     
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
-                        <div style="padding: 1rem; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border-radius: 12px; text-align: center;">
-                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🍽️</div>
-                            <div style="font-weight: 600;">Food & Drink</div>
-                        </div>
-                        <div style="padding: 1rem; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border-radius: 12px; text-align: center;">
-                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏃‍♂️</div>
-                            <div style="font-weight: 600;">Sports & Fitness</div>
-                        </div>
-                        <div style="padding: 1rem; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border-radius: 12px; text-align: center;">
-                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🛍️</div>
-                            <div style="font-weight: 600;">Shopping</div>
-                        </div>
-                        <div style="padding: 1rem; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border-radius: 12px; text-align: center;">
-                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎭</div>
-                            <div style="font-weight: 600;">Entertainment</div>
-                        </div>
-                        <div style="padding: 1rem; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border-radius: 12px; text-align: center;">
-                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🌳</div>
-                            <div style="font-weight: 600;">Nature & Parks</div>
-                        </div>
-                        <div style="padding: 1rem; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border-radius: 12px; text-align: center;">
-                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎨</div>
-                            <div style="font-weight: 600;">Culture</div>
-                        </div>
-                    </div>
+                    <ul style="list-style: none; padding: 0; max-width: 600px; margin: 0 auto 2rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+                        <li style="padding: 0.75rem 0; font-size: 1.1rem; color: #1a1a2e;">🍽️ Food & Drink</li>
+                        <li style="padding: 0.75rem 0; font-size: 1.1rem; color: #1a1a2e;">🏃‍♂️ Sports & Fitness</li>
+                        <li style="padding: 0.75rem 0; font-size: 1.1rem; color: #1a1a2e;">🛍️ Shopping</li>
+                        <li style="padding: 0.75rem 0; font-size: 1.1rem; color: #1a1a2e;">🎭 Entertainment</li>
+                        <li style="padding: 0.75rem 0; font-size: 1.1rem; color: #1a1a2e;">🌳 Nature & Parks</li>
+                        <li style="padding: 0.75rem 0; font-size: 1.1rem; color: #1a1a2e;">🎨 Culture</li>
+                        <li style="padding: 0.75rem 0; font-size: 1.1rem; color: #1a1a2e;">🚌 Transportation</li>
+                        <li style="padding: 0.75rem 0; font-size: 1.1rem; color: #1a1a2e;">🔧 Services</li>
+                        <li style="padding: 0.75rem 0; font-size: 1.1rem; color: #1a1a2e;">🏥 Health</li>
+                        <li style="padding: 0.75rem 0; font-size: 1.1rem; color: #1a1a2e;">🎓 Education</li>
+                        <li style="padding: 0.75rem 0; font-size: 1.1rem; color: #1a1a2e;">🏨 Accommodation</li>
+                    </ul>
                     
-                    <p style="font-size: 1rem; color: #64748b; text-align: center; margin-bottom: 1.5rem;">
-                        <em>Plus Transportation, Services, Health, Education, and Accommodation</em>
-                    </p>
+
                     
                     <div style="text-align: center;">
                         <a href="https://wiki.openstreetmap.org/wiki/Map_features" style="display: inline-block; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 1rem 1.5rem; text-decoration: none; border-radius: 8px; font-weight: 600; margin: 0.5rem;">View OSM Categories</a>
@@ -559,6 +510,28 @@
                         <a href="https://wiki.openstreetmap.org/wiki/Key:leisure" style="display: inline-block; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 1rem 1.5rem; text-decoration: none; border-radius: 8px; font-weight: 600; margin: 0.5rem;">OSM Leisure</a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="writings-section">
+        <div class="container">
+            <h2>Writings</h2>
+            
+            <div class="writings-list">
+                <ul style="list-style: none; padding: 0; max-width: 600px; margin: 0 auto;">
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid #e2e8f0;">
+                        <a href="https://medium.com/@_tijs/two-ways-to-build-location-on-atproto-geo-markers-vs-embedded-check-ins-7b8dfea0f5f5" target="_blank" style="color: #1a1a2e; text-decoration: none; font-weight: 500; font-size: 1.1rem;">Two Ways to Build Location on ATProto: Geo-markers vs Embedded Check-ins</a>
+                    </li>
+                    
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid #e2e8f0;">
+                        <a href="https://medium.com/@_tijs/the-missing-piece-how-location-data-is-coming-to-the-at-protocol-9858160c2634" target="_blank" style="color: #1a1a2e; text-decoration: none; font-weight: 500; font-size: 1.1rem;">The Missing Piece: How Location Data is Coming to the AT Protocol</a>
+                    </li>
+                    
+                    <li style="padding: 0.75rem 0;">
+                        <a href="https://medium.com/@_tijs/building-a-foursquare-clone-on-at-protocol-3c648aee8d79" target="_blank" style="color: #1a1a2e; text-decoration: none; font-weight: 500; font-size: 1.1rem;">Building a Foursquare Clone on AT Protocol</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
