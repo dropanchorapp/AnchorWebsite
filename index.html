@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anchor - Social Check-ins for Bluesky</title>
-    <meta name="description" content="Anchor brings social check-ins to Bluesky with native apps for macOS and iOS using the AT Protocol.">
+    <meta name="description" content="Anchor brings social check-ins to Bluesky with a native iOS app using the AT Protocol. Store check-ins on your PDS and optionally share on social.">
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
@@ -313,13 +313,13 @@
             <div class="hero-content">
                 <img src="static/AnchorAppIcon-transparent.png" alt="Anchor App Icon" class="logo">
                 <h1>Anchor</h1>
-                <p>Social check-ins for Bluesky</p>
+                <p>Store check-ins on your PDS, optionally share on Bluesky</p>
                 <div class="download">
                     <a href="https://github.com/dropanchorapp/Anchor" class="btn btn-secondary">View on GitHub</a>
                     <a href="#features" class="btn">Set Sail</a>
                 </div>
                 <p style="margin-top: 2rem; font-size: 1.1rem; opacity: 0.9;">
-                    Available for macOS 14+ and iOS
+                    Available now on iOS App Store
                 </p>
             </div>
         </div>
@@ -329,7 +329,7 @@
         <div class="features" id="features">
             <h2>Drop Anchor Anywhere</h2>
             <p class="subtitle">
-                Anchor brings social check-ins to Bluesky with native apps for macOS and iOS, letting you share your location and experiences using the AT Protocol.
+                Anchor lets you store structured check-in data on your home PDS with optional social sharing on Bluesky using the AT Protocol. Browse a global feed of check-ins from around the world.
             </p>
             
             <div class="feature-grid">
@@ -340,15 +340,15 @@
                 </div>
                 
                 <div class="feature">
-                    <span class="emoji">💬</span>
-                    <h3>Rich Text Posts</h3>
-                    <p>Share check-ins with clickable venue links, hashtags, and custom messages on Bluesky.</p>
+                    <span class="emoji">🌍</span>
+                    <h3>Global Feed</h3>
+                    <p>Discover check-ins from around the world via the Anchor AppView, no authentication required.</p>
                 </div>
                 
                 <div class="feature">
-                    <span class="emoji">🍎</span>
-                    <h3>Native Apps</h3>
-                    <p>Beautiful SwiftUI interfaces on macOS (menubar) and iOS (mobile), designed for their respective platforms.</p>
+                    <span class="emoji">📱</span>
+                    <h3>Native iOS App</h3>
+                    <p>Beautiful SwiftUI interface designed specifically for iOS with TabView navigation and native patterns.</p>
                 </div>
                 
                 <div class="feature">
@@ -358,15 +358,15 @@
                 </div>
                 
                 <div class="feature">
-                    <span class="emoji">🌐</span>
-                    <h3>AT Protocol</h3>
-                    <p>Built on Bluesky's open AT Protocol for decentralized social networking.</p>
+                    <span class="emoji">🏠</span>
+                    <h3>Your Data, Your PDS</h3>
+                    <p>All check-in data stored on your home Personal Data Server using StrongRef architecture for content integrity.</p>
                 </div>
                 
                 <div class="feature">
-                    <span class="emoji">🎯</span>
-                    <h3>Quick Check-ins</h3>
-                    <p>Fast and easy location sharing from your macOS menubar or iOS device.</p>
+                    <span class="emoji">🔄</span>
+                    <h3>Optional Social Sharing</h3>
+                    <p>Choose for each check-in whether to share as a Bluesky post or keep private on your PDS.</p>
                 </div>
             </div>
         </div>
@@ -374,36 +374,48 @@
 
     <div class="section section-gray">
         <div class="container">
-            <h2 style="text-align: center; font-size: 2.5rem; font-weight: 800; margin-bottom: 3rem; color: #1a1a2e; letter-spacing: -0.02em;">Choose Your Platform</h2>
+            <h2 style="text-align: center; font-size: 2.5rem; font-weight: 800; margin-bottom: 3rem; color: #1a1a2e; letter-spacing: -0.02em;">Screenshots</h2>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; max-width: 900px; margin: 0 auto;">
-                <div style="background: white; padding: 3rem 2rem; border-radius: 20px; text-align: center; box-shadow: 0 12px 40px rgba(0,0,0,0.08); border: 1px solid #e2e8f0;">
-                    <div style="font-size: 4rem; margin-bottom: 1.5rem;">💻</div>
-                    <h3 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 1rem; color: #1a1a2e;">macOS Menubar</h3>
-                    <p style="color: #64748b; font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;">
-                        Quick check-ins from your Mac's menubar. Perfect for when you're working and want to share where you are or what you're doing.
-                    </p>
-                    <div style="color: #667eea; font-weight: 600; margin-bottom: 1rem;">Requirements:</div>
-                    <div style="color: #64748b; font-size: 0.95rem;">macOS 14 or later</div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto 4rem;">
+                <div style="text-align: center;">
+                    <img src="static/anchor-feed-screen.jpeg" alt="Global Feed" style="width: 100%; max-width: 250px; border-radius: 20px; box-shadow: 0 12px 40px rgba(0,0,0,0.15);">
+                    <h4 style="margin-top: 1rem; font-size: 1.2rem; font-weight: 600; color: #1a1a2e;">Global Feed</h4>
+                    <p style="color: #64748b; font-size: 0.95rem; margin-top: 0.5rem;">Browse check-ins from around the world</p>
                 </div>
                 
-                <div style="background: white; padding: 3rem 2rem; border-radius: 20px; text-align: center; box-shadow: 0 12px 40px rgba(0,0,0,0.08); border: 1px solid #e2e8f0;">
-                    <div style="font-size: 4rem; margin-bottom: 1.5rem;">📱</div>
-                    <h3 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 1rem; color: #1a1a2e;">iOS Mobile</h3>
-                    <p style="color: #64748b; font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;">
-                        Full-featured mobile app for check-ins on the go. Browse your feed, discover nearby places, and share your adventures.
-                    </p>
-                    <div style="color: #667eea; font-weight: 600; margin-bottom: 1rem;">Requirements:</div>
-                    <div style="color: #64748b; font-size: 0.95rem;">iOS 26 or later</div>
+                <div style="text-align: center;">
+                    <img src="static/anchor-checkin-screen.jpeg" alt="Check-in Tab" style="width: 100%; max-width: 250px; border-radius: 20px; box-shadow: 0 12px 40px rgba(0,0,0,0.15);">
+                    <h4 style="margin-top: 1rem; font-size: 1.2rem; font-weight: 600; color: #1a1a2e;">Check-in Tab</h4>
+                    <p style="color: #64748b; font-size: 0.95rem; margin-top: 0.5rem;">Start your check-in journey</p>
+                </div>
+                
+                <div style="text-align: center;">
+                    <img src="static/anchor-nearby-locations-screen.jpeg" alt="Nearby Places" style="width: 100%; max-width: 250px; border-radius: 20px; box-shadow: 0 12px 40px rgba(0,0,0,0.15);">
+                    <h4 style="margin-top: 1rem; font-size: 1.2rem; font-weight: 600; color: #1a1a2e;">Nearby Places</h4>
+                    <p style="color: #64748b; font-size: 0.95rem; margin-top: 0.5rem;">Discover places to check in at</p>
+                </div>
+                
+                <div style="text-align: center;">
+                    <img src="static/anchor-checkin-message-screen.jpeg" alt="Message Compose" style="width: 100%; max-width: 250px; border-radius: 20px; box-shadow: 0 12px 40px rgba(0,0,0,0.15);">
+                    <h4 style="margin-top: 1rem; font-size: 1.2rem; font-weight: 600; color: #1a1a2e;">Add Your Message</h4>
+                    <p style="color: #64748b; font-size: 0.95rem; margin-top: 0.5rem;">Customize your check-in</p>
                 </div>
             </div>
             
-            <div style="text-align: center; margin-top: 3rem;">
-                <p style="color: #64748b; font-size: 1.1rem; margin-bottom: 2rem;">
-                    Both apps share the same AT Protocol backend, so your check-ins sync seamlessly between platforms.
+            <div style="text-align: center; background: white; padding: 3rem 2rem; border-radius: 20px; box-shadow: 0 12px 40px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; max-width: 600px; margin: 0 auto;">
+                <div style="font-size: 4rem; margin-bottom: 1.5rem;">📱</div>
+                <h3 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 1rem; color: #1a1a2e;">Available on iOS</h3>
+                <p style="color: #64748b; font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;">
+                    Full-featured mobile app for check-ins on the go. Browse the global feed, discover nearby places, and manage your location data with privacy controls.
                 </p>
-                <a href="https://github.com/dropanchorapp/Anchor" style="display: inline-block; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 1.2rem 2.5rem; text-decoration: none; border-radius: 12px; font-weight: 600; font-size: 1.1rem;">
-                    Download from GitHub
+                <div style="color: #667eea; font-weight: 600; margin-bottom: 1rem;">Requirements:</div>
+                <div style="color: #64748b; font-size: 0.95rem; margin-bottom: 2rem;">iOS 18.6 or later</div>
+                
+                <a href="https://apps.apple.com/app/anchor" style="display: inline-block; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 1.2rem 2.5rem; text-decoration: none; border-radius: 12px; font-weight: 600; font-size: 1.1rem; margin-right: 1rem;">
+                    Download on App Store
+                </a>
+                <a href="https://github.com/dropanchorapp/Anchor" style="display: inline-block; background: rgba(255,255,255,0.1); border: 2px solid #667eea; color: #667eea; padding: 1rem 2rem; text-decoration: none; border-radius: 12px; font-weight: 600; font-size: 1.1rem;">
+                    View on GitHub
                 </a>
             </div>
         </div>
@@ -415,40 +427,46 @@
             
             <div style="max-width: 900px; margin: 0 auto;">
                 <div style="margin-bottom: 4rem;">
-                    <h3 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 1.5rem; color: #1a1a2e;">What's a Check-in Record?</h3>
+                    <h3 style="font-size: 1.8rem; font-weight: 700; margin-bottom: 1.5rem; color: #1a1a2e;">StrongRef Architecture</h3>
                     <p style="font-size: 1.1rem; color: #64748b; margin-bottom: 2rem; line-height: 1.7;">
-                        Every check-in you create in Anchor gets stored as a structured record using the AT Protocol. Here's what one looks like under the hood:
+                        Every check-in creates <strong>two separate records</strong> on your PDS: a reusable address record and a check-in record that references it. Here's what they look like:
                     </p>
                     
-                    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 2rem; margin-bottom: 2rem;">
-                        <pre style="margin: 0; overflow-x: auto; font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace; font-size: 0.9rem; line-height: 1.6; color: #1a1a2e;"><code>{
-  "$type": "app.dropanchor.checkin",
-  "text": "Great coffee and climbing session!",
-  "createdAt": "2025-06-27T10:30:00Z",
-  "locations": [
-    {
-      "$type": "community.lexicon.location.geo",
-      "latitude": "40.7128",
-      "longitude": "-74.0060"
-    },
-    {
-      "$type": "community.lexicon.location.address", 
-      "name": "Brooklyn Boulders",
-      "street": "123 Main St",
-      "locality": "New York",
-      "region": "NY",
-      "country": "US",
-      "postalCode": "10001"
-    }
-  ],
-  "category": "climbing",
-  "categoryGroup": "Sports & Fitness",
-  "categoryIcon": "🧗‍♂️"
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+                        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem;">
+                            <h4 style="margin-bottom: 1rem; color: #1a1a2e; font-weight: 600;">Address Record</h4>
+                            <pre style="margin: 0; overflow-x: auto; font-family: 'SF Mono', Monaco, monospace; font-size: 0.8rem; line-height: 1.4; color: #1a1a2e;"><code>{
+  "$type": "community.lexicon.location.address",
+  "name": "Brooklyn Boulders",
+  "street": "123 Main St",
+  "locality": "New York",
+  "region": "NY",
+  "country": "US",
+  "postalCode": "10001"
 }</code></pre>
+                        </div>
+                        
+                        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem;">
+                            <h4 style="margin-bottom: 1rem; color: #1a1a2e; font-weight: 600;">Check-in Record</h4>
+                            <pre style="margin: 0; overflow-x: auto; font-family: 'SF Mono', Monaco, monospace; font-size: 0.8rem; line-height: 1.4; color: #1a1a2e;"><code>{
+  "$type": "app.dropanchor.checkin",
+  "text": "Great climbing session!",
+  "createdAt": "2025-07-13T10:30:00Z",
+  "addressRef": {
+    "uri": "at://did:user/community.../abc123",
+    "cid": "bafyreigh2akiscail..."
+  },
+  "coordinates": {
+    "$type": "community.lexicon.location.geo",
+    "latitude": "40.7128",
+    "longitude": "-74.0060"
+  }
+}</code></pre>
+                        </div>
                     </div>
                     
                     <p style="font-size: 1.1rem; color: #64748b; line-height: 1.7;">
-                        This record uses the <a href="/.well-known/atproto-lexicons/app.dropanchor.checkin.json" style="color: #667eea; text-decoration: none; font-weight: 500;">app.dropanchor.checkin lexicon</a> and includes both geographic coordinates and structured address data using community-standard location schemas.
+                        The StrongRef includes both the record URI and CID for content integrity verification. If someone modifies the address record, the CID won't match and you'll know it's been tampered with.
                     </p>
                 </div>
                 
@@ -460,23 +478,23 @@
                     
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 2rem 0;">
                         <div style="padding: 1.5rem; background: #fafbfc; border: 1px solid #e2e8f0; border-radius: 12px;">
-                            <h4 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem; color: #1a1a2e;">🏠 Your Data, Your Server</h4>
+                            <h4 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem; color: #1a1a2e;">🏠 Your Data, Your PDS</h4>
                             <p style="font-size: 1rem; color: #64748b; line-height: 1.6; margin: 0;">
-                                Unlike centralized platforms, your check-ins are stored on infrastructure you control (or trust). Our <a href="https://anchorpds.val.run/" style="color: #667eea; text-decoration: none;">PDS</a> handles storage and federation.
+                                Your check-ins are stored on your home Personal Data Server, giving you control over your location data. Choose from Bluesky's PDS or run your own.
                             </p>
                         </div>
                         
                         <div style="padding: 1.5rem; background: #fafbfc; border: 1px solid #e2e8f0; border-radius: 12px;">
-                            <h4 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem; color: #1a1a2e;">🌐 Federation Ready</h4>
+                            <h4 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem; color: #1a1a2e;">🌐 Global Feed Discovery</h4>
                             <p style="font-size: 1rem; color: #64748b; line-height: 1.6; margin: 0;">
-                                Your check-ins can be discovered and shared across the entire AT Protocol network, not just within Anchor. Any compatible client can read your location data.
+                                Browse check-ins from around the world via the <a href="https://anchor-feed-generator.val.run" style="color: #667eea; text-decoration: none;">Anchor AppView</a>, aggregating location data across the AT Protocol network.
                             </p>
                         </div>
                         
                         <div style="padding: 1.5rem; background: #fafbfc; border: 1px solid #e2e8f0; border-radius: 12px;">
-                            <h4 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem; color: #1a1a2e;">🔍 Rich Categorization</h4>
+                            <h4 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem; color: #1a1a2e;">🔄 Optional Social Sharing</h4>
                             <p style="font-size: 1rem; color: #64748b; line-height: 1.6; margin: 0;">
-                                Each check-in includes structured category data based on OpenStreetMap standards, making it easy to filter and discover places by type.
+                                Choose for each check-in whether to share as a Bluesky post or keep private. Your structured data stays on your PDS regardless.
                             </p>
                         </div>
                     </div>
